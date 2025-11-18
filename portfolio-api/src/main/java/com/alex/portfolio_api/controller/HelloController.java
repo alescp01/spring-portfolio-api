@@ -15,4 +15,9 @@ public class HelloController {
     public String bye() {
         return "Bye, esta es tu primera API con Spring Boot";
     }
+
+    @GetMapping("/api/user")
+    public UserResponse getUser() {
+        return new UserResponse("Alex", "Junior Developer", "Madrid");
+    }
 }
